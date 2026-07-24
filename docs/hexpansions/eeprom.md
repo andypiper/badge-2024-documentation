@@ -80,42 +80,42 @@ Use this when you are developing, provisioning a board that is not yet in the fi
 
 4. Adjust the header information as you desire:
 
-   ```python
-   # Fill in your desired header info here:
-   header = HexpansionHeader(
-       manifest_version="2024",
-       fs_offset=32,
-       eeprom_page_size=16,
-       eeprom_total_size=256,  # 2 kbit EEPROM (1024 * (16 // 8) // 8)
-       vid=0xCA75,
-       pid=0x1337,
-       unique_id=0x0,
-       friendly_name="Flopagon",
-   )
-   ```
+    ```python
+    # Fill in your desired header info here:
+    header = HexpansionHeader(
+        manifest_version="2024",
+        fs_offset=32,
+        eeprom_page_size=16,
+        eeprom_total_size=256,  # 2 kbit EEPROM (1024 * (16 // 8) // 8)
+        vid=0xCA75,
+        pid=0x1337,
+        unique_id=0x0,
+        friendly_name="Flopagon",
+    )
+    ```
 
-   !!! tip "Setting `eeprom_total_size`"
+    !!! tip "Setting `eeprom_total_size`"
 
-       `eeprom_total_size` is the total filesystem size in **bytes**. Set it to match your EEPROM chip — check the datasheet for the capacity in bits, then divide by 8.
+        `eeprom_total_size` is the total filesystem size in **bytes**. Set it to match your EEPROM chip — check the datasheet for the capacity in bits, then divide by 8.
 
-       In MicroPython, `//` is integer division. The final `// 8` in any formula converts bits to bytes. The `(16 // 8)` term relates to the 16-byte page size, but once you know your chip's capacity you can set the value directly.
+        In MicroPython, `//` is integer division. The final `// 8` in any formula converts bits to bytes. The `(16 // 8)` term relates to the 16-byte page size, but once you know your chip's capacity you can set the value directly.
 
-       The example above uses a **2 kbit** EEPROM (2048 bits = 256 bytes):
+        The example above uses a **2 kbit** EEPROM (2048 bits = 256 bytes):
 
-       ```python
-       eeprom_total_size=256
-       # same as: 1024 * (16 // 8) // 8
-       ```
+        ```python
+        eeprom_total_size=256
+        # same as: 1024 * (16 // 8) // 8
+        ```
 
-       For other chips, substitute your EEPROM's bit capacity. For example, the **AT24C32** is a 32 kbit device (4096 bytes):
+        For other chips, substitute your EEPROM's bit capacity. For example, the **AT24C32** is a 32 kbit device (4096 bytes):
 
-       ```python
-       eeprom_total_size=4096
-       # or: 32768 // 8
-       # or: (32 * 1024) // 8
-       ```
+        ```python
+        eeprom_total_size=4096
+        # or: 32768 // 8
+        # or: (32 * 1024) // 8
+        ```
 
-   For more information see [EEPROM format](#eeprom-format).
+    For more information see [EEPROM format](#eeprom-format).
 
 5. The following [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) command mounts the `modules` directory and runs the `prepare_eeprom.py` script from the locally mounted directory. The `prepare_eeprom.py` script flashes a header to the first page of the EEPROM:
 
