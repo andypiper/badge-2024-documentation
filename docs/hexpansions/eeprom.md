@@ -94,7 +94,7 @@ Use this when you are developing, provisioning a board that is not yet in the fi
    )
    ```
 
-   ??? tip "Setting `eeprom_total_size`"
+   !!! tip "Setting `eeprom_total_size`"
 
        `eeprom_total_size` is the total filesystem size in **bytes**. Set it to match your EEPROM chip — check the datasheet for the capacity in bits, then divide by 8.
 
