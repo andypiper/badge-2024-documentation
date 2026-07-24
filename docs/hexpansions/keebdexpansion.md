@@ -2,7 +2,7 @@
 
 ![KeebDex Hexpansion V3 next to the Tildagon](tildagon_keebdeck_v3.jpeg){: style="width:300px; height: auto" , align=right }
 
-The *keebdexpansion* is our first official hexpansion - a keyboard, so you can tap out messages and be less frustrated when entering WiFi passwords.
+The *keebdexpansion* is our first official hexpansion - a keyboard, so you can tap out messages and be less frustrated when entering Wi-Fi passwords.
 
 Available for EMF 2026 camp ticket holders on the emfcamp website. See [the blog post introducing the Spaceagon](https://blog.emfcamp.org/2026/05/28/tildagon-2026-spaceagon/) for more info.
 
