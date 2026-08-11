@@ -26,7 +26,7 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 !!! info "Need help? Ask here:"
 
     - irc: __irc.libera.chat #emfcamp-badge__
-    - matrix: __[#badge:emfcamp.org][matrix]__
+    - matrix: __[#badge:emfcamp.org](https://matrix.to/#/%23badge%3Aemfcamp.org)__
 
 ## Badge specs
 

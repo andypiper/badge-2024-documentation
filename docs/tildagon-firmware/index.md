@@ -10,7 +10,7 @@ The Tildagon firmware is the MicroPython-based operating system that runs on the
 !!! info
 
     - irc: __irc.libera.chat #emfcamp-badge__
-    - matrix: __[#badge:emfcamp.org][matrix]__
+    - matrix: __[#badge:emfcamp.org](https://matrix.to/#/%23badge%3Aemfcamp.org)__
 
 A few ways you can get involved:
 
